@@ -1,0 +1,7 @@
+[[extraction]]
+	name="ApacheCombinedAccessLog"
+	desc="Use regex to extract fields from an apache combined access log"
+	module="regex"
+	tag="apache"
+	params='^(?P<IP>\S+) (?P<ident>\S+) (?P<userid>\S+) \[(?P<timestamp>[\w:/]+\s[+\-]\d{4})\] "(?P<method>\S+)\s?(?P<url>\S+)?\s?(?P<protocol>\S+)?" (?P<resp>\d{3}|-) (?P<bytes>\d+|-)\s?"?(?P<referrer>[^"]*)"?\s?"?(?P<useragent>[^"]*)?"?$'
+
