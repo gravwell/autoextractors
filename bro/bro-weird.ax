@@ -1,0 +1,7 @@
+[[extraction]]
+	tag="bro-weird"
+	name="bro-weird"
+	desc="Bro weird logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_h, orig_p, resp_h, resp_p, name, addl, notice, peer"
