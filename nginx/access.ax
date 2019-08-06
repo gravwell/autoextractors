@@ -1,0 +1,7 @@
+# Nginx access log autoextractor
+[[extraction]]
+  tag = 'nginx'
+  module = 'regex'
+  params = '^(?P<ip>\S+)\s\-\s(?P<user>\S+)\s\[(?P<ts>[^\]]+)\]\s\"(?P<method>\S+)\s(?P<url>\S+)\s(?P<ver>[^"]+)\"\s(?P<resp>\d+)\s(?P<bytes>\d+)\s\"(?P<referrer>\S+)\"\s\"(?P<useragent>.+)\"$'
+  name = 'nginx'
+  desc = 'nginx access log'
