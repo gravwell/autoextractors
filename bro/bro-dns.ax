@@ -1,7 +1,0 @@
-[[extraction]]
-	tag="bro-dns"
-	name="bro-dns"
-	desc="Bro dns logs"
-	module="fields"
-	args='-d "\t"'
-	params="ts, uid, orig_h, orig_p, resp_h, resp_p, proto, trans_id, rtt, query, qclass, qclass_name, qtype, qtype_name, rcode, rcode_name, AA, TC, RD, RA, Z, answers, TTLs, rejected"

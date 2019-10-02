@@ -1,0 +1,55 @@
+[[extraction]]
+	tag="broconn"
+	name="broconn"
+	desc="Bro conn logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig, orig_port, resp, resp_port, proto, service, duration, orig_bytes, dest_bytes, conn_state, local_orig, local_resp, missed_bytes, history, orig_pkts, orig_ip_bytes, resp_pkts, resp_ip_bytes, tunnel_parents"
+
+[[extraction]]
+	tag="brodhcp"
+	name="brodhcp"
+	desc="Bro dhcp logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uids, client_addr, server_addr, mac, host_name, client_fqdn, domain, requested_addr, assigned_addr, lease_time, client_message, server_message, msg_types, duration"
+
+[[extraction]]
+	tag="brodns"
+	name="brodns"
+	desc="Bro dns logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_h, orig_p, resp_h, resp_p, proto, trans_id, rtt, query, qclass, qclass_name, qtype, qtype_name, rcode, rcode_name, AA, TC, RD, RA, Z, answers, TTLs, rejected"
+
+[[extraction]]
+	tag="brofiles"
+	name="brofiles"
+	desc="Bro files logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, fuid, tx_hosts, rx_hosts, conn_uids, source, depth, analyzers, mime_type, filename, duration, local_orig, is_orig, seen_bytes, total_bytes, missing_bytes, overflow_bytes, timedout, parent_fuid, md5, sha1, sha256, extracted, extracted_cutoff, extracted_size"
+
+[[extraction]]
+	tag="brohttp"
+	name="brohttp"
+	desc="Bro http logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_h, orig_p, resp_h, resp_p, trans_depth, method, host, uri, referrer, version, user_agent, request_body_len, response_body_len, status_code, status_msg, info_code, info_msg, tags, username, password, proxied, orig_fuids, orig_filenames, orig_mime_types, resp_fuids, resp_filenames, resp_mime_types"
+
+[[extraction]]
+	tag="brossl"
+	name="brossl"
+	desc="Bro ssl logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_h, orig_p, resp_h, resp_p, version, cipher, curve, server_name, resumed, last_alert, next_protocol, established, cert_chain_fuids, client_cert_chain_fuids, subject, issuer, client_subject, client_issuer, validation_status"
+
+[[extraction]]
+	tag="broweird"
+	name="broweird"
+	desc="Bro weird logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_h, orig_p, resp_h, resp_p, name, addl, notice, peer"
