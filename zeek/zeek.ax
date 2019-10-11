@@ -4,7 +4,7 @@
 	desc="Bro conn logs"
 	module="fields"
 	args='-d "\t"'
-	params="ts, uid, orig, orig_port, resp, resp_port, proto, service, duration, orig_bytes, dest_bytes, conn_state, local_orig, local_resp, missed_bytes, history, orig_pkts, orig_ip_bytes, resp_pkts, resp_ip_bytes, tunnel_parents"
+	params="ts, uid, orig, orig_portort, resp, resp_portort, proto, service, duration, orig_bytes, dest_bytes, conn_state, local_orig, local_resp, missed_bytes, history, orig_pkts, orig_ip_bytes, resp_pkts, resp_ip_bytes, tunnel_parents"
 
 [[extraction]]
 	tag="brodhcp"
@@ -20,7 +20,7 @@
 	desc="Bro dns logs"
 	module="fields"
 	args='-d "\t"'
-	params="ts, uid, orig_h, orig_p, resp_h, resp_p, proto, trans_id, rtt, query, qclass, qclass_name, qtype, qtype_name, rcode, rcode_name, AA, TC, RD, RA, Z, answers, TTLs, rejected"
+	params="ts, uid, orig, orig_port, resp, resp_port, proto, trans_id, rtt, query, qclass, qclass_name, qtype, qtype_name, rcode, rcode_name, AA, TC, RD, RA, Z, answers, TTLs, rejected"
 
 [[extraction]]
 	tag="brofiles"
@@ -36,7 +36,7 @@
 	desc="Bro http logs"
 	module="fields"
 	args='-d "\t"'
-	params="ts, uid, orig_h, orig_p, resp_h, resp_p, trans_depth, method, host, uri, referrer, version, user_agent, request_body_len, response_body_len, status_code, status_msg, info_code, info_msg, tags, username, password, proxied, orig_fuids, orig_filenames, orig_mime_types, resp_fuids, resp_filenames, resp_mime_types"
+	params="ts, uid, orig, orig_port, resp, resp_port, trans_depth, method, host, uri, referrer, version, user_agent, request_body_len, response_body_len, status_code, status_msg, info_code, info_msg, tags, username, password, proxied, orig_fuids, orig_filenames, orig_mime_types, resp_fuids, resp_filenames, resp_mime_types"
 
 [[extraction]]
 	tag="brossl"
@@ -44,7 +44,7 @@
 	desc="Bro ssl logs"
 	module="fields"
 	args='-d "\t"'
-	params="ts, uid, orig_h, orig_p, resp_h, resp_p, version, cipher, curve, server_name, resumed, last_alert, next_protocol, established, cert_chain_fuids, client_cert_chain_fuids, subject, issuer, client_subject, client_issuer, validation_status"
+	params="ts, uid, orig, orig_port, resp, resp_port, version, cipher, curve, server_name, resumed, last_alert, next_protocol, established, cert_chain_fuids, client_cert_chain_fuids, subject, issuer, client_subject, client_issuer, validation_status"
 
 [[extraction]]
 	tag="broweird"
@@ -52,4 +52,4 @@
 	desc="Bro weird logs"
 	module="fields"
 	args='-d "\t"'
-	params="ts, uid, orig_h, orig_p, resp_h, resp_p, name, addl, notice, peer"
+	params="ts, uid, orig, orig_port, resp, resp_port, name, addl, notice, peer"
