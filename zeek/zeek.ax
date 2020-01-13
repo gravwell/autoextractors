@@ -4,7 +4,7 @@
 	desc="Zeek conn logs"
 	module="fields"
 	args='-d "\t"'
-	params="ts, uid, orig, orig_portort, resp, resp_portort, proto, service, duration, orig_bytes, dest_bytes, conn_state, local_orig, local_resp, missed_bytes, history, orig_pkts, orig_ip_bytes, resp_pkts, resp_ip_bytes, tunnel_parents"
+	params="ts, uid, orig, orig_port, resp, resp_port, proto, service, duration, orig_bytes, dest_bytes, conn_state, local_orig, local_resp, missed_bytes, history, orig_pkts, orig_ip_bytes, resp_portkts, resp_ip_bytes, tunnel_parents"
 
 [[extraction]]
 	tag="zeekdhcp"
@@ -53,3 +53,29 @@
 	module="fields"
 	args='-d "\t"'
 	params="ts, uid, orig, orig_port, resp, resp_port, name, addl, notice, peer"
+
+[[extraction]]
+	tag="zeekx509"
+	name="zeekx509"
+	desc="Zeek X509 logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, id, version, serial, subject, issuer, not_valid_before, not_valid_after, key_alg, sig_alg, key_type, key_length, certi
+ficate.exponent, curve, dns, uri, email, ip, ca, path_len"
+
+[[extraction]]
+	tag="zeekssh"
+	name="zeekssh"
+	desc="Zeek SSH logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_p, resp_host, resp_port, version, auth_success, auth_attempts, direction, client, server, cipher_alg, mac_alg, compression_alg, kex_alg, host_key_alg, host_key"
+
+
+[[extraction]]
+	tag="zeeksip"
+	name="zeeksip"
+	desc="Zeek SIP logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, trans_depth, method, uri, date, request_fromrequest_to, response_from, response_to, reply_to, call_id, seq, subject, request_path, response_path, user_agent, status_code, status_msg, warning, request_body_len, response_body_len, content_type"
