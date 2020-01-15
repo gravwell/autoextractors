@@ -78,3 +78,156 @@
 	module="fields"
 	args='-d "\t"'
 	params="ts, uid, orig_host, orig_port, resp_host, resp_port, trans_depth, method, uri, date, request_fromrequest_to, response_from, response_to, reply_to, call_id, seq, subject, request_path, response_path, user_agent, status_code, status_msg, warning, request_body_len, response_body_len, content_type"
+
+
+[[extraction]]
+	tag="zeekdpd"
+	name="zeekdpd"
+	desc="Zeek DPD logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, proto, analyzer, failure_reason, packet_segment"
+
+[[extraction]]
+	tag="zeeksnmp"
+	name="zeeksnmp"
+	desc="Zeek SNMP logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, duration, version, community, get_requests, get_bulk_requests, get_responses, set_requests, display_string, up_since"
+
+[[extraction]]
+	tag="zeeksmtp"
+	name="zeeksmtp"
+	desc="Zeek SMTP logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, trans_depth, helo, mailfrom"
+
+[[extraction]]
+	tag="zeekpe"
+	name="zeekpe"
+	desc="Zeek PE logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, id, machine, compile_ts, os, subsystem, is_exe, is_64bit, uses_aslr, uses_dep"
+
+[[extraction]]
+	tag="zeektunnel"
+	name="zeektunnel"
+	desc="Zeek tunnel logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, tunnel_type, action"
+
+[[extraction]]
+	tag="zeeksocks"
+	name="zeeksocks"
+	desc="Zeek socks logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, version, user, password, status, request, request_host, request_name, request_port, bound_host, bound_name"
+
+[[extraction]]
+	tag="zeeksoftware"
+	name="zeeksoftware"
+	desc="Zeek software logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, host, host_port, software_type, name, major, minor, minor2, minor3, addl, unparsed_version"
+
+[[extraction]]
+	tag="zeeksyslog"
+	name="zeeksyslog"
+	desc="Zeek Syslog logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, proto, facility, severity, message"
+
+[[extraction]]
+	tag="zeekrfb"
+	name="zeekrfb"
+	desc="Zeek rfb logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, client_major_version, client_minor_version, server_major_version, server_minor_version, authentication_method, auth, share_flag, desktop_name, width, height"
+
+[[extraction]]
+	tag="zeekradius"
+	name="zeekradius"
+	desc="Zeek radius logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, username, mac, remote_ip, connect_info, result, logged"
+
+[[extraction]]
+	tag="zeekrdp"
+	name="zeekrdp"
+	desc="Zeek rdp logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, cookie, result, security_protocol, client_build, client_name, client_dig_product_id, desktop_width, desktop_height, requested_color_depth, cert_type, cert_count, cert_permanent, encryption_level, encryption_method"
+
+[[extraction]]
+	tag="zeekftp"
+	name="zeekftp"
+	desc="Zeek FTP logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, user, password, command, arg, mime_type, file_size, reply_code, reply_msg, data_channel_passive, data_channel_source_ip, data_channel_destination_ip, data_channel_destination_port"
+
+[[extraction]]
+	tag="zeekintel"
+	name="zeekintel"
+	desc="Zeek intel logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, indicator, indicator_type, seen_where, seen_node, matched, sources, fuid, file_mime_type, file_desc"
+
+[[extraction]]
+	tag="zeekirc"
+	name="zeekirc"
+	desc="Zeek IRC logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, nick, user, command, value, additional_info, dcc_file_name, dcc_file_size, dcc_mime_type, fuid"
+
+[[extraction]]
+	tag="zeekkerberos"
+	name="zeekkerberos"
+	desc="Zeek Kerberos logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, request_type, client, service, success, error_msg, from, till, cipher, forwardable, renewable, client_cert, client_cert_fuid, server_cert_subject, server_cert_fuid"
+
+[[extraction]]
+	tag="zeekmysql"
+	name="zeekmysql"
+	desc="Zeek mysql logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, cmd, arg, success, rows, response"
+
+[[extraction]]
+	tag="zeekmodbus"
+	name="zeekmodbus"
+	desc="Zeek modbus logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, func, exception"
+
+[[extraction]]
+	tag="zeeknotice"
+	name="zeeknotice"
+	desc="Zeek Notice logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, fuid, mime, desc, proto, note, msg, sub, src, dst, p, n, peer_descr, actions, suppress_for, dropped, destination_country_code, destination_region, destination_city, destination_latitude, destination_longitude"
+
+[[extraction]]
+	tag="zeeksignature"
+	name="zeeksignature"
+	desc="Zeek signature logs"
+	module="fields"
+	args='-d "\t"'
+	params="ts, uid, orig_host, orig_port, resp_host, resp_port, note, sig_id, event_msg, sub_msg, sig_count, host_count"
