@@ -1,0 +1,8 @@
+[[extraction]]
+	tag="vpcflow"
+	name="VPCflow"
+	desc="VPC flow logs (TSV format)"
+	module="fields"
+	args='-d " "'
+	params="version, account_id, interface_id, srcaddr, dstaddr, srcport, dstport, protocol, packets, bytes, start, end, action, log_status"
+
