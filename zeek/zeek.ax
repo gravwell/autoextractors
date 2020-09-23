@@ -231,3 +231,19 @@
 	module="fields"
 	args='-d "\t"'
 	params="ts, uid, orig_host, orig_port, resp_host, resp_port, note, sig_id, event_msg, sub_msg, sig_count, host_count"
+
+[[extraction]]
+	tag="zeeksmb_mapping"
+	name="zeeksmb_mapping"
+	desc="Zeek SMB mappings"
+	module="fields"
+	args='-d "\t"'
+	params="ts,uid,orig,orig_port,resp,resp_port,path,service,native_file_system,share_type"
+
+[[extraction]]
+	tag="zeeksmb_files"
+	name="zeeksmb_files"
+	desc="Zeek SMB files"
+	module="fields"
+	args='-d "\t"'
+	params="ts,uid,orig,orig_port,resp,resp_port,fuid,action,path,name,size,prev_name,modified,accessed,created,changed"
