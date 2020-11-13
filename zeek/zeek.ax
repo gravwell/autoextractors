@@ -60,7 +60,7 @@
 	desc="Zeek X509 logs"
 	module="fields"
 	args='-d "\t"'
-	params="ts, id, version, serial, subject, issuer, not_valid_before, not_valid_after, key_alg, sig_alg, key_type, key_length, exponent, curve, dns, uri, email, ip, ca, path_len"
+	params="ts, uid, version, serial, subject, issuer, not_valid_before, not_valid_after, key_alg, sig_alg, key_type, key_length, exponent, curve, dns, uri, email, ip, ca, path_len"
 
 [[extraction]]
 	tag="zeekssh"
@@ -110,7 +110,7 @@
 	desc="Zeek PE logs"
 	module="fields"
 	args='-d "\t"'
-	params="ts, id, machine, compile_ts, os, subsystem, is_exe, is_64bit, uses_aslr, uses_dep"
+	params="ts, uid, machine, compile_ts, os, subsystem, is_exe, is_64bit, uses_aslr, uses_dep"
 
 [[extraction]]
 	tag="zeektunnel"
